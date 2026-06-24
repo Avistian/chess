@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 1 — Board Coordinates</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <p class="mission-tag">Mission: 2000 Elo · Tournament play</p>
+  <h1>The Board and Coordinates</h1>
+  <p class="subtitle">Lesson 001 · ~10 minutes</p>
+
+  <p>
+    Every tournament game is recorded in <strong>algebraic notation</strong> — a compact language
+    for naming squares and moves. Before tactics, openings, or endgames, you need to read the
+    board fluently. This is the skill players skip, and it slows everything else down.
+  </p>
+
+  <h2>The grid</h2>
+  <p>
+    A chessboard is 8 squares wide and 8 squares tall — 64 squares total.
+    Two labels define every square:
+  </p>
+  <ul>
+    <li><strong>Files</strong> — the vertical columns, labeled <strong>a</strong> through <strong>h</strong> from left to right (White's perspective).</li>
+    <li><strong>Ranks</strong> — the horizontal rows, labeled <strong>1</strong> through <strong>8</strong> from bottom to top (White's perspective).</li>
+  </ul>
+  <p>
+    A square's name is its <strong>file letter + rank number</strong>. The bottom-left square
+    (from White's view) is <strong>a1</strong>. The center square where many games begin is
+    <strong>e4</strong> (White's king pawn two squares forward).
+  </p>
+
+  <figure>
+    <div class="board-wrap">
+      <div id="demo-board" class="board-container"></div>
+    </div>
+    <figcaption>White's view — a1 is bottom-left, h8 is top-right</figcaption>
+  </figure>
+
+  <div class="callout">
+    <strong>Tournament tip:</strong> Sit with the board oriented so each player has a light square
+    on their right-hand corner (<em>"light on the right"</em>). White's pieces start on ranks 1 and 2;
+    Black's on ranks 7 and 8.
+  </div>
+
+  <h2>How moves are written</h2>
+  <p>
+    A move names the <em>destination square</em>, not the path. Examples:
+  </p>
+  <ul>
+    <li><strong>e4</strong> — a pawn moves to e4</li>
+    <li><strong>Nf3</strong> — the knight moves to f3 (piece letter + square; N = Knight, B = Bishop, R = Rook, Q = Queen, K = King)</li>
+    <li><strong>exd5</strong> — the pawn on the e-file captures on d5</li>
+    <li><strong>O-O</strong> — kingside castling</li>
+  </ul>
+  <p>
+    In a tournament you'll write these on a scoresheet move-by-move. Being fast at finding
+    square names saves time and prevents illegal-move disputes.
+  </p>
+
+  <h2>Practice — find the square</h2>
+  <p>
+    Click the square named in the prompt. You need <strong>8 out of 10</strong> to pass.
+    Run it twice if you miss — retrieval practice is the point.
+  </p>
+
+  <div id="coordinate-quiz"></div>
+
+  <div class="source">
+    <strong>Primary source:</strong>
+    <a href="https://lichess.org/learn">Lichess Learn</a> — free interactive board introduction.
+    After this lesson, run through their piece-movement chapters to refresh rules you may have forgotten.
+  </div>
+
+  <div class="ask-teacher">
+    Stuck on a square, or want to practice from Black's perspective?
+    Ask your teacher in chat — that's what they're for.
+  </div>
+
+  <nav class="nav-links">
+    <strong>Reference</strong>
+    <ul>
+      <li><a href="../reference/glossary.html">Chess Glossary</a></li>
+      <li><a href="../reference/study-roadmap.html">Study Roadmap to 2000</a></li>
+    </ul>
+    <strong style="display:block;margin-top:1rem">Next lessons</strong>
+    <ul>
+      <li><em>002 — Rules refresh &amp; special moves (coming next)</em></li>
+    </ul>
+  </nav>
+</article>
+
+<script src="../assets/board.js"></script>
+<script src="../assets/coordinate-quiz.js"></script>
+<script>
+  // Demo board with e4 highlighted
+  var demo = document.getElementById('demo-board');
+  ChessBoard.renderBoard(demo, { orientation: 'white', highlight: 'e4' });
+  ChessBoard.markSquare(demo, 'e4', 'highlight');
+
+  CoordinateQuiz.mount(document.getElementById('coordinate-quiz'), { count: 10 });
+</script>
+</body>
+</html>
