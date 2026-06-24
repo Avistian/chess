@@ -15,3 +15,5 @@
 - **Play:** online + over-the-board
 - **Out of scope:** nothing declared
 - **Technical:** lessons must use plain `<script>` tags, not ES modules — browsers block `import` on `file://` URLs.
+- **GitHub Pages:** site at `https://avistian.github.io/chess/` once pushed and Actions enabled (Settings → Pages → Source: GitHub Actions).
+- **Cursor `/teach` skill:** must be registered under `.cursor/skills/` (symlink → `.agents/skills/teach`) and `.cursor/commands/teach.toml` — agents view does not scan `.agents/skills/` alone.
