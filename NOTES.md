@@ -7,6 +7,14 @@
 - Baseline: played years ago, knows very basics only.
 - First lesson delivered: `0001-board-coordinates.html`.
 
+## Session 1 — 2025-06-24
+
+- User asked for another lesson (`/teach give another lesson`).
+- Lesson 002 delivered: `0002-rules-and-special-moves.html` — castling, en passant, promotion, stalemate, touch-move.
+- New assets: piece rendering in `board.js`, `rules-quiz.js` multiple-choice widget.
+- New reference: `reference/special-moves.html`.
+- Next in ZPD: basic checkmates (Lesson 003).
+
 ## Preferences
 
 - **Learning style:** visual (to be validated — try other formats occasionally)
