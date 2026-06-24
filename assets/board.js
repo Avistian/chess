@@ -2,6 +2,11 @@
  * Chess board renderer — works without a web server (no ES modules).
  */
 (function (global) {
+  var PIECE_CHARS = {
+    wK: '\u2654', wQ: '\u2655', wR: '\u2656', wB: '\u2657', wN: '\u2658', wP: '\u2659',
+    bK: '\u265A', bQ: '\u265B', bR: '\u265C', bB: '\u265D', bN: '\u265E', bP: '\u265F',
+  };
+
   function spacer() {
     return document.createElement('div');
   }
@@ -19,6 +24,8 @@
     const orientation = opts.orientation || 'white';
     const onSquareClick = opts.onSquareClick;
     const highlight = opts.highlight;
+    const highlights = opts.highlights || (highlight ? [highlight] : []);
+    const pieces = opts.pieces || {};
     const files = orientation === 'white'
       ? ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
       : ['h', 'g', 'f', 'e', 'd', 'c', 'b', 'a'];
@@ -42,7 +49,14 @@
         const sqEl = document.createElement('div');
         sqEl.className = 'square ' + (isLight ? 'light' : 'dark');
         sqEl.dataset.square = sq;
-        if (highlight === sq) sqEl.classList.add('highlight');
+        if (highlights.indexOf(sq) !== -1) sqEl.classList.add('highlight');
+        if (pieces[sq]) {
+          var pieceEl = document.createElement('span');
+          pieceEl.className = 'piece';
+          pieceEl.textContent = PIECE_CHARS[pieces[sq]] || '';
+          pieceEl.setAttribute('aria-hidden', 'true');
+          sqEl.appendChild(pieceEl);
+        }
         if (clickable) {
           sqEl.classList.add('clickable');
           sqEl.addEventListener('click', function () {
@@ -84,6 +98,7 @@
   }
 
   global.ChessBoard = {
+    PIECE_CHARS: PIECE_CHARS,
     renderBoard: renderBoard,
     markSquare: markSquare,
     clearMarks: clearMarks,

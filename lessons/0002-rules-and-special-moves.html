@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 2 — Rules &amp; Special Moves</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <p class="mission-tag">Mission: 2000 Elo · Tournament play</p>
+  <h1>Rules Refresh &amp; Special Moves</h1>
+  <p class="subtitle">Lesson 002 · ~12 minutes</p>
+
+  <p>
+    Tournament arbiters enforce rules you may not see in casual online blitz.
+    Players near 2000 do not lose games because they forgot how a knight moves —
+    they lose points on <strong>castling</strong>, <strong>en passant</strong>,
+    <strong>stalemate</strong>, and <strong>touch-move</strong>. This lesson
+    locks in the edge cases before tactics work.
+  </p>
+
+  <h2>Piece movement — 30-second refresh</h2>
+  <table class="rule-table">
+    <thead>
+      <tr><th>Piece</th><th>Moves</th><th>Notation letter</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>King</td><td>One square any direction</td><td>K</td></tr>
+      <tr><td>Queen</td><td>Any number of squares: line or diagonal</td><td>Q</td></tr>
+      <tr><td>Rook</td><td>Any number of squares horizontally or vertically</td><td>R</td></tr>
+      <tr><td>Bishop</td><td>Any number of squares diagonally</td><td>B</td></tr>
+      <tr><td>Knight</td><td>L-shape: two squares + one perpendicular (jumps)</td><td>N</td></tr>
+      <tr><td>Pawn</td><td>Forward 1 (or 2 from start); captures diagonally forward 1</td><td>(none)</td></tr>
+    </tbody>
+  </table>
+  <p>
+    If any piece feels rusty, run
+    <a href="https://lichess.org/learn">Lichess Learn</a> chapters 2–7 before the quiz.
+  </p>
+
+  <figure>
+    <div class="board-wrap">
+      <div id="pieces-demo" class="board-container"></div>
+    </div>
+    <figcaption>Starting position — White on ranks 1–2, Black on 7–8</figcaption>
+  </figure>
+
+  <h2>Check, checkmate, stalemate</h2>
+  <div class="diagram-row two-col">
+    <figure>
+      <div class="board-wrap">
+        <div id="check-demo" class="board-container"></div>
+      </div>
+      <figcaption><strong>Check</strong> — king attacked; must escape</figcaption>
+    </figure>
+    <figure>
+      <div class="board-wrap">
+        <div id="stalemate-demo" class="board-container"></div>
+      </div>
+      <figcaption><strong>Stalemate</strong> — no legal move, not in check → draw</figcaption>
+    </figure>
+  </div>
+  <p>
+    In tournaments, stalemate saves many lost positions. Before you queen a pawn,
+  ask: <em>does the opponent have any legal move?</em>
+    See <a href="https://chess.stackexchange.com/questions/tagged/rules">Chess Stack Exchange — rules</a>
+    for precise wording when something odd happens at the board.
+  </p>
+
+  <h2>Castling (O-O / O-O-O)</h2>
+  <p>
+    A one-time king move: the king slides two squares toward a rook; the rook jumps
+    to the other side. Written <strong>O-O</strong> (kingside) or <strong>O-O-O</strong> (queenside).
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="castle-demo" class="board-container"></div>
+    </div>
+    <figcaption>After O-O — king on g1, rook on f1</figcaption>
+  </figure>
+  <p>Castling is <strong>illegal</strong> if any of these are true:</p>
+  <ul>
+    <li>The king is currently in check</li>
+    <li>The king would cross or land on an attacked square</li>
+    <li>The king or that rook has already moved</li>
+    <li>There are pieces between king and rook</li>
+  </ul>
+  <div class="callout">
+    <strong>Tournament tip:</strong> A rook under attack may still castle — only the
+    <em>king's path</em> must be safe. Many players get this wrong under time pressure.
+  </div>
+
+  <h2>En passant</h2>
+  <p>
+    When an enemy pawn advances <strong>two squares</strong> from its starting rank and
+    lands beside your pawn, you may capture it <em>as if it moved one square</em> —
+    but only on the <strong>very next move</strong>.
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="ep-demo" class="board-container"></div>
+    </div>
+    <figcaption>White pawn on e5; Black plays …d7–d5; exd6 en passant is legal now only</figcaption>
+  </figure>
+
+  <h2>Promotion</h2>
+  <p>
+    A pawn reaching the far rank promotes to <strong>queen, rook, bishop, or knight</strong>
+    (your choice). Under-promotion to a knight can deliver immediate checkmate;
+    promoting to a king is never legal.
+  </p>
+
+  <h2>Practice — rules quiz</h2>
+  <p>
+    Eight tournament-style situations. You need <strong>6 out of 8</strong> to pass.
+    Every answer choice is the same length — no hints from formatting.
+  </p>
+
+  <div id="rules-quiz"></div>
+
+  <div class="source">
+    <strong>Primary source:</strong>
+    <a href="https://www.youtube.com/watch?v=OCSbzArwB10">GothamChess — How To Play Chess: The Ultimate Beginner Guide</a>
+    (IM Levy Rozman). Watch the sections on special moves, then use this quiz to test recall.
+  </div>
+
+  <div class="ask-teacher">
+    Unclear on a rule, or had a situation come up in a real game?
+    Describe the position to your teacher in chat — that's what they're for.
+  </div>
+
+  <nav class="nav-links">
+    <strong>Lessons</strong>
+    <ul>
+      <li><a href="0001-board-coordinates.html">Lesson 001 — Board Coordinates</a></li>
+      <li><em>003 — Basic checkmates (coming next)</em></li>
+    </ul>
+    <strong style="display:block;margin-top:1rem">Reference</strong>
+    <ul>
+      <li><a href="../reference/special-moves.html">Special Moves Cheat Sheet</a></li>
+      <li><a href="../reference/glossary.html">Chess Glossary</a></li>
+      <li><a href="../reference/study-roadmap.html">Study Roadmap to 2000</a></li>
+    </ul>
+  </nav>
+</article>
+
+<script src="../assets/board.js"></script>
+<script src="../assets/rules-quiz.js"></script>
+<script>
+  var start = {
+    a1: 'wR', b1: 'wN', c1: 'wB', d1: 'wQ', e1: 'wK', f1: 'wB', g1: 'wN', h1: 'wR',
+    a2: 'wP', b2: 'wP', c2: 'wP', d2: 'wP', e2: 'wP', f2: 'wP', g2: 'wP', h2: 'wP',
+    a7: 'bP', b7: 'bP', c7: 'bP', d7: 'bP', e7: 'bP', f7: 'bP', g7: 'bP', h7: 'bP',
+    a8: 'bR', b8: 'bN', c8: 'bB', d8: 'bQ', e8: 'bK', f8: 'bB', g8: 'bN', h8: 'bR',
+  };
+
+  ChessBoard.renderBoard(document.getElementById('pieces-demo'), { pieces: start });
+
+  ChessBoard.renderBoard(document.getElementById('check-demo'), {
+    pieces: { e1: 'wK', e8: 'bQ', d1: 'wR' },
+    highlights: ['e1', 'e8'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('stalemate-demo'), {
+    pieces: { a8: 'bK', a7: 'bP', c6: 'wK' },
+    highlights: ['a8', 'a7'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('castle-demo'), {
+    pieces: { g1: 'wK', f1: 'wR', e8: 'bK', a8: 'bR' },
+    highlights: ['g1', 'f1'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('ep-demo'), {
+    pieces: { e5: 'wP', d5: 'bP', e1: 'wK', e8: 'bK' },
+    highlights: ['e5', 'd5', 'd6'],
+  });
+
+  RulesQuiz.mount(document.getElementById('rules-quiz'), { count: 8, passAt: 6 });
+</script>
+</body>
+</html>

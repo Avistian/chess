@@ -209,6 +209,12 @@ figcaption {
 .square.correct   { box-shadow: inset 0 0 0 3px var(--correct); }
 .square.wrong     { box-shadow: inset 0 0 0 3px var(--wrong); }
 
+.square .piece {
+  font-size: clamp(1.25rem, 5.5vw, 2.25rem);
+  line-height: 1;
+  pointer-events: none;
+}
+
 .square .coord-hint {
   position: absolute;
   bottom: 2px;
@@ -286,6 +292,66 @@ figcaption {
 
 .btn:hover { filter: brightness(1.1); }
 .btn:disabled { opacity: 0.5; cursor: default; }
+
+/* Multiple-choice quiz */
+.choice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.choice-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: 0.65rem 0.85rem;
+  margin: 0.4rem 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+.choice-btn:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-light); }
+.choice-btn:disabled { cursor: default; }
+.choice-btn.correct { border-color: var(--correct); background: #e8f5ee; color: var(--correct); font-weight: 600; }
+.choice-btn.wrong { border-color: var(--wrong); background: #fce8e8; color: var(--wrong); }
+
+.diagram-row {
+  display: grid;
+  gap: 1rem;
+  margin: 1.25rem 0;
+}
+
+@media (min-width: 560px) {
+  .diagram-row.two-col { grid-template-columns: 1fr 1fr; align-items: start; }
+}
+
+.rule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+
+.rule-table th, .rule-table td {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.rule-table th {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
 
 @media print {
   body { padding: 0; font-size: 11pt; }
