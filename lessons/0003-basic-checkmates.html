@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 — Basic Checkmates</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <p class="mission-tag">Mission: 2000 Elo · Tournament play</p>
+  <h1>Basic Checkmates</h1>
+  <p class="subtitle">Lesson 003 · ~12 minutes · You: 415 Elo, first win</p>
+
+  <p>
+    You won your first rated game — that matters. Most beginners never convert a winning
+    position; they stalemate, blunder the queen, or run out of time. At 415 Elo you are
+    still in Phase 1 (foundation), but you have proof you can finish a game. This lesson
+    teaches the two mates you will see most often when you are ahead: <strong>queen + king</strong>
+    and <strong>rook + king</strong> vs a lone king.
+  </p>
+
+  <h2>One idea: shrink the box</h2>
+  <p>
+    A lone king can be trapped on the board. Imagine a rectangle of squares the enemy king
+    is allowed to occupy. Your job is to make that rectangle smaller until the king is
+    squeezed to the edge or corner — then deliver checkmate.
+  </p>
+  <ul>
+    <li><strong>Queen</strong> cuts off files, ranks, and diagonals at a distance — fastest boxer.</li>
+    <li><strong>Rook</strong> cuts off one file or rank — the <em>ladder mate</em> pattern.</li>
+    <li><strong>Your king</strong> walks in only after the enemy king is boxed — two kings must not touch.</li>
+  </ul>
+  <div class="callout">
+    <strong>Conversion rule:</strong> When you are winning, ask every move:
+    <em>does my opponent still have a legal move?</em> A careless queen move can
+    <a href="../reference/glossary.html">stalemate</a> and turn a win into a draw.
+  </div>
+
+  <h2>Queen + king vs king</h2>
+  <p>
+    Place the queen one knight-move away from the enemy king (not adjacent — that can
+    stalemate on the edge). Each queen move should chop off a row or column of escape
+    squares. Your king follows at a safe distance until you can deliver mate on the back
+    rank or in a corner.
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="queen-box-1" class="board-container"></div>
+    </div>
+    <figcaption>Queen on c5 boxes the king to the a–c files and ranks 5–8</figcaption>
+  </figure>
+  <figure>
+    <div class="board-wrap">
+      <div id="queen-mate" class="board-container"></div>
+    </div>
+    <figcaption>Finished — queen on b7, king on c6, Black mated on a8</figcaption>
+  </figure>
+  <p>
+    You do not need to memorize every move order. You need the habit:
+    <strong>restrict first, check second.</strong> Wild checks let the king run toward
+    the center and waste time.
+  </p>
+
+  <h2>Rook + king vs king (ladder mate)</h2>
+  <p>
+    The rook cuts off a <strong>rank or file</strong>. Each rook check (or quiet rook slide)
+    pushes the enemy king one row closer to the edge. Your king follows on the same file
+    or rank until the rook delivers mate on the back rank or a-file.
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="rook-cut" class="board-container"></div>
+    </div>
+    <figcaption>Ra8 — king trapped on the 8th rank; White king walks up the e-file</figcaption>
+  </figure>
+  <figure>
+    <div class="board-wrap">
+      <div id="rook-mate" class="board-container"></div>
+    </div>
+    <figcaption>Mate on the back rank — rook on a8, kings on c6 and a6</figcaption>
+  </figure>
+  <p>
+    Two rooks vs king is even easier (alternating checks along ranks). One rook takes more
+    patience — the same boxing idea applies.
+  </p>
+
+  <h2>Check vs checkmate vs stalemate</h2>
+  <div class="diagram-row two-col">
+    <figure>
+      <div class="board-wrap">
+        <div id="check-not-mate" class="board-container"></div>
+      </div>
+      <figcaption><strong>Check, not mate</strong> — king escapes to b7</figcaption>
+    </figure>
+    <figure>
+      <div class="board-wrap">
+        <div id="stalemate-trap" class="board-container"></div>
+      </div>
+      <figcaption><strong>Stalemate trap</strong> — Qa8?? is a draw, not a win</figcaption>
+    </figure>
+  </div>
+  <p>
+    Before you play the “winning” move, scan every square around the enemy king.
+    Tournament players at 2000 still occasionally stalemate a won queen ending.
+  </p>
+
+  <h2>Practice — mate recognition</h2>
+  <p>
+    Eight positions: mate, near-miss, or best move. You need <strong>6 out of 8</strong> to pass.
+    Every answer choice is the same length — no hints from formatting.
+  </p>
+
+  <div id="mate-quiz"></div>
+
+  <h2>Real-world drill</h2>
+  <p>
+    After this quiz, open
+    <a href="https://lichess.org/practice/checkmates">Lichess Practice → Checkmates</a>
+    and run <strong>Queen vs King</strong> and <strong>Rook vs King</strong> until you can
+    finish both without hints. That is the skill that turns your next +queen position into
+    a win instead of a draw.
+  </p>
+
+  <div class="source">
+    <strong>Primary source:</strong>
+    <a href="https://lichess.org/practice/checkmates">Lichess Practice — Checkmates</a>
+    (free, interactive). Do the queen and rook vs king chapters right after this lesson.
+  </div>
+
+  <div class="ask-teacher">
+  Had a winning endgame slip away, or not sure if a position is mate?
+    Paste the FEN or describe the board to your teacher in chat.
+  </div>
+
+  <nav class="nav-links">
+    <strong>Lessons</strong>
+    <ul>
+      <li><a href="0001-board-coordinates.html">Lesson 001 — Board Coordinates</a></li>
+      <li><a href="0002-rules-and-special-moves.html">Lesson 002 — Rules &amp; Special Moves</a></li>
+      <li><em>004 — Tactics introduction (coming next)</em></li>
+    </ul>
+    <strong style="display:block;margin-top:1rem">Reference</strong>
+    <ul>
+      <li><a href="../reference/basic-checkmates.html">Basic Checkmates Cheat Sheet</a></li>
+      <li><a href="../reference/glossary.html">Chess Glossary</a></li>
+      <li><a href="../reference/study-roadmap.html">Study Roadmap to 2000</a></li>
+    </ul>
+  </nav>
+</article>
+
+<script src="../assets/board.js"></script>
+<script src="../assets/mate-quiz.js"></script>
+<script>
+  ChessBoard.renderBoard(document.getElementById('queen-box-1'), {
+    pieces: { c5: 'wQ', e4: 'wK', b8: 'bK' },
+    highlights: ['c5', 'b8', 'a8', 'c8', 'b7', 'c7', 'b6', 'c6'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('queen-mate'), {
+    pieces: { b7: 'wQ', c6: 'wK', a8: 'bK' },
+    highlights: ['a8', 'b7'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('rook-cut'), {
+    pieces: { a8: 'wR', e4: 'wK', h8: 'bK' },
+    highlights: ['a8', 'h8', 'g8', 'f8', 'e8', 'd8', 'c8', 'b8'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('rook-mate'), {
+    pieces: { a8: 'wR', c6: 'wK', a6: 'bK' },
+    highlights: ['a6', 'a8'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('check-not-mate'), {
+    pieces: { c6: 'wK', d8: 'wQ', a8: 'bK' },
+    highlights: ['a8', 'b7'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('stalemate-trap'), {
+    pieces: { a6: 'wQ', b6: 'wK', a8: 'bK' },
+    highlights: ['a8', 'c8'],
+  });
+
+  MateQuiz.mount(document.getElementById('mate-quiz'), { count: 8, passAt: 6 });
+</script>
+</body>
+</html>

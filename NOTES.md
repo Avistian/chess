@@ -15,6 +15,15 @@
 - New reference: `reference/special-moves.html`.
 - Next in ZPD: basic checkmates (Lesson 003).
 
+## Session 2 — 2025-06-24
+
+- User won first rated game; reported **415 Elo**.
+- Lesson 003 delivered: `0003-basic-checkmates.html` — queen+king and rook+king vs lone king, stalemate traps.
+- New assets: `mate-quiz.js` multiple-choice mate recognition widget.
+- New reference: `reference/basic-checkmates.html`.
+- Learning record: `0002-first-win-baseline.md`.
+- Next in ZPD: tactics introduction — forks, pins, loose pieces (Lesson 004).
+
 ## Preferences
 
 - **Learning style:** visual (to be validated — try other formats occasionally)
