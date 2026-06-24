@@ -16,4 +16,4 @@
 - **Out of scope:** nothing declared
 - **Technical:** lessons must use plain `<script>` tags, not ES modules — browsers block `import` on `file://` URLs.
 - **GitHub Pages:** site at `https://avistian.github.io/chess/` once pushed and Actions enabled (Settings → Pages → Source: GitHub Actions).
-- **Cursor `/teach` skill:** must be registered under `.cursor/skills/` (symlink → `.agents/skills/teach`) and `.cursor/commands/teach.toml` — agents view does not scan `.agents/skills/` alone.
+- **Cursor `/teach` skill:** canonical source is `.agents/skills/teach/`; mirror it at `.cursor/skills/teach/` (real directory with file symlinks, not a directory symlink) so the agents window slash palette discovers it. Do not also add `.cursor/commands/teach.toml` — same name collides with the skill.
