@@ -24,6 +24,15 @@
 - Learning record: `0002-first-win-baseline.md`.
 - Next in ZPD: tactics introduction — forks, pins, loose pieces (Lesson 004).
 
+## Session 3 — 2025-06-25
+
+- User asked to prepare next lesson for tomorrow.
+- Lesson 004 delivered: `0004-tactics-intro.html` — forks, pins, loose pieces, scan habit.
+- New assets: `tactics-quiz.js` multiple-choice tactic recognition widget.
+- New reference: `reference/basic-tactics.html`.
+- Glossary updated: fork, pin, loose piece.
+- Next in ZPD: more tactic patterns — skewers, discovered attacks, or daily puzzle routine (Lesson 005).
+
 ## Preferences
 
 - **Learning style:** visual (to be validated — try other formats occasionally)
