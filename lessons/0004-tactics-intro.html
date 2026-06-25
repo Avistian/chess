@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 4 — Tactics Introduction</title>
+  <link rel="stylesheet" href="../assets/lesson.css">
+</head>
+<body>
+<article>
+  <p class="mission-tag">Mission: 2000 Elo · Tournament play</p>
+  <h1>Tactics Introduction</h1>
+  <p class="subtitle">Lesson 004 · ~12 minutes · You: 415 Elo · forks, pins, loose pieces</p>
+
+  <p>
+    You know how to finish a won endgame. Now learn how games <em>become</em> won in the
+    first place. At 415 Elo, most decisive moments are not deep combinations — they are
+    <strong>one-move oversights</strong>: a piece left undefended, a knight fork, a bishop
+    pin. Phase 1 study is roughly <strong>70% tactics</strong>
+    (<a href="../reference/study-roadmap.html">study roadmap</a>). This lesson names the
+    three patterns you will see most often.
+  </p>
+
+  <h2>One idea: scan for loose pieces</h2>
+  <p>
+    Before you calculate a long line, ask one question:
+    <em>does my opponent have a piece nobody defends?</em>
+    A <a href="../reference/glossary.html">loose piece</a> (also called a
+    <em>hanging</em> or <em>undefended</em> piece) is free material — take it.
+    Forks and pins often <em>create</em> loose pieces by forcing a king to move while
+    something else stays behind.
+  </p>
+  <div class="callout">
+    <strong>Tournament habit:</strong> On every opponent move, glance at what that move
+    attacked and what it left behind. Most blunders at your level are hanging pieces,
+    not missed mate-in-four.
+  </div>
+
+  <h2>Fork — one piece, two targets</h2>
+  <p>
+    A <strong>fork</strong> is a single move that attacks two or more enemy pieces at once.
+    The defender can only save one. Knights are the classic forkers — they jump in an L-shape
+    and ignore blockers.
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="fork-knight" class="board-container"></div>
+    </div>
+    <figcaption>Nf7 — attacks king on e8 and queen on d8; king must move, queen often falls</figcaption>
+  </figure>
+  <p>
+    Queens and pawns fork too, but knights show up in almost every beginner game. When you
+    see a knight one jump away from the enemy king, check what else sits on its landing squares.
+  </p>
+
+  <h2>Pin — piece frozen on a line</h2>
+  <p>
+    A <strong>pin</strong> ties a piece to something valuable behind it on a straight line
+    (file, rank, or diagonal). A <em>relative pin</em> to a queen or rook is painful; an
+    <em>absolute pin</em> to the king is worse — the pinned piece cannot legally move.
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="pin-bishop" class="board-container"></div>
+    </div>
+    <figcaption>Bg5 pins the knight on f6 to the king on e8 — Nf6?? is illegal</figcaption>
+  </figure>
+  <p>
+    Pins are slow pressure. You pile up on the pinned piece, or use the pin to win tempo
+    elsewhere. Bishops and rooks pin most often; queens pin along any line.
+  </p>
+
+  <h2>Loose piece — take what's free</h2>
+  <p>
+    Not every tactic is flashy. If a rook sits on a square with zero defenders, your queen
+    or bishop may simply capture it. At your rating, this happens constantly — players
+    chase attacks and forget to defend.
+  </p>
+  <figure>
+    <div class="board-wrap">
+      <div id="loose-rook" class="board-container"></div>
+    </div>
+    <figcaption>Qc4 eyes the rook on a2 — no black piece guards a2</figcaption>
+  </figure>
+  <div class="diagram-row two-col">
+    <figure>
+      <div class="board-wrap">
+        <div id="loose-knight" class="board-container"></div>
+      </div>
+      <figcaption><strong>Re4</strong> — knight on e4 has no defender</figcaption>
+    </figure>
+    <figure>
+      <div class="board-wrap">
+        <div id="fork-rook" class="board-container"></div>
+      </div>
+      <figcaption><strong>Ne5</strong> — fork on king and rook</figcaption>
+    </figure>
+  </div>
+  <p>
+    The scan order that works at your level:
+    <strong>loose pieces → checks that fork → pins you can exploit.</strong>
+    Save discovered attacks and skewers for after these feel automatic.
+  </p>
+
+  <h2>Practice — tactic recognition</h2>
+  <p>
+    Eight positions: name the tactic or pick the best move. You need
+    <strong>6 out of 8</strong> to pass. Every answer choice is the same length — no hints
+    from formatting.
+  </p>
+
+  <div id="tactics-quiz"></div>
+
+  <h2>Real-world drill</h2>
+  <p>
+    After this quiz, open
+    <a href="https://lichess.org/practice">Lichess Practice</a> and run
+    <strong>Fork</strong> and <strong>Pin</strong> until you pass without hints. Then add
+    <strong>15 minutes of daily puzzles</strong> at
+    <a href="https://lichess.org/training">Lichess Training</a> — this is the single highest-
+    leverage habit on your path to 1400.
+  </p>
+
+  <div class="source">
+    <strong>Primary source:</strong>
+    <a href="https://lichess.org/practice">Lichess Practice — Fork, Pin, and related themes</a>
+    (free, interactive). Run the fork and pin chapters right after this lesson.
+  </div>
+
+  <div class="ask-teacher">
+    Missed a tactic in a game, or not sure why a move worked?
+    Paste the FEN or describe the position to your teacher in chat.
+  </div>
+
+  <nav class="nav-links">
+    <strong>Lessons</strong>
+    <ul>
+      <li><a href="0001-board-coordinates.html">Lesson 001 — Board Coordinates</a></li>
+      <li><a href="0002-rules-and-special-moves.html">Lesson 002 — Rules &amp; Special Moves</a></li>
+      <li><a href="0003-basic-checkmates.html">Lesson 003 — Basic Checkmates</a></li>
+      <li><em>005 — More tactics patterns (coming next)</em></li>
+    </ul>
+    <strong style="display:block;margin-top:1rem">Reference</strong>
+    <ul>
+      <li><a href="../reference/basic-tactics.html">Basic Tactics Cheat Sheet</a></li>
+      <li><a href="../reference/basic-checkmates.html">Basic Checkmates Cheat Sheet</a></li>
+      <li><a href="../reference/glossary.html">Chess Glossary</a></li>
+      <li><a href="../reference/study-roadmap.html">Study Roadmap to 2000</a></li>
+    </ul>
+  </nav>
+</article>
+
+<script src="../assets/board.js"></script>
+<script src="../assets/tactics-quiz.js"></script>
+<script>
+  ChessBoard.renderBoard(document.getElementById('fork-knight'), {
+    pieces: { f7: 'wN', e8: 'bK', d8: 'bQ', e1: 'wK' },
+    highlights: ['f7', 'e8', 'd8'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('pin-bishop'), {
+    pieces: { g5: 'wB', f6: 'bN', e8: 'bK', e1: 'wK' },
+    highlights: ['g5', 'f6', 'e8'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('loose-rook'), {
+    pieces: { c4: 'wQ', a2: 'bR', e8: 'bK', e1: 'wK' },
+    highlights: ['c4', 'a2'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('loose-knight'), {
+    pieces: { e1: 'wR', e4: 'bN', e8: 'bK', e5: 'wP' },
+    highlights: ['e1', 'e4'],
+  });
+
+  ChessBoard.renderBoard(document.getElementById('fork-rook'), {
+    pieces: { e5: 'wN', d7: 'bK', c6: 'bR', e1: 'wK' },
+    highlights: ['e5', 'd7', 'c6'],
+  });
+
+  TacticsQuiz.mount(document.getElementById('tactics-quiz'), { count: 8, passAt: 6 });
+</script>
+</body>
+</html>
